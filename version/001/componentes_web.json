@@ -1,0 +1,48 @@
+//COMPONENTES WEB
+{"FORM":[
+	{"inicio":[
+		{
+		"label":"Usuario/Email",
+		"type":"input",
+		"placeholder":"usuario o email",
+		},
+		{
+		"label":"Contraseña",
+		"type":"password",
+		"placeholder":"contraseña",
+		},
+		{
+		"label":"Iniciar",
+		"type":"submit",
+		"placeholder":"Iniciar",
+		}
+
+	]},
+	{"registro":[
+		{
+		"label":"Usuario/Email",
+		"type":"input",
+		"placeholder":"usuario o email",
+		},
+		{
+		"label":"Contraseña",
+		"type":"password",
+		"placeholder":"contraseña",
+		},
+		{
+		"label":"Repita Contraseña",
+		"type":"password",
+		"placeholder":"repita contraseña",
+		},
+		{
+		"label":"Registrar",
+		"type":"submit",
+		"placeholder":"Registrar",
+		}
+	]}
+	]
+},
+{"NAVBAR":[
+	{}
+]
+}

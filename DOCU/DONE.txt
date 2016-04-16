@@ -1,0 +1,26 @@
+DONE: 
+
+IDENTIFICADORES
+	Los identificadores fallan al ser más de 10 (cuando hay x9 en registro:
+		PR000010 acaba siendo PR00001
+
+SELECT: SELECTED
+	Usando xajax hay que cargar el select entero, si se cargan sólo los option dentro de un select ya prefijado luego no deja seleccionarlos.
+
+ENVÍO DE LOS SELECT.OPTION[SELECTED] A PHP
+	Se han cargado los valores de los option seleccionados [selected="selected"] a un input_hidden en forma de array JSON.
+
+	Esto es así porque:
+	-SELECT sólo permite enviar UN elemento OPTION: aquel con selected=true.
+		Sólo UN OPTION puede tener selected=true
+		VARIOS OPTION pueden tener el atributo de etiqueta selected="selected"
+		
+	A poder ser, CAMBIAR EN UN FUTURO: 
+	-los datos quedan demasiado expuestos. 
+	-El navegador pone los estilos que le da la gana.
+
+	Al menos queda una idea de cómo crear arrays simples JSON para cuando AJAX esté en condiciones.
+
+DATOS DUPLICACOS AL REFRESCAR
+	Controlado con un input-hidden con un timestamp y una copia en $_SESSION.
+	

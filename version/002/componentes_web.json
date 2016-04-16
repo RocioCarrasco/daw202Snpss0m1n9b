@@ -1,0 +1,65 @@
+//COMPONENTES WEB
+{"FORM":[
+	{"inicio":[
+		{
+		"label":"Usuario/Email",
+		"type":"input",
+		"placeholder":"usuario o email",
+		},
+		{
+		"label":"Contraseña",
+		"type":"password",
+		"placeholder":"contraseña",
+		},
+		{
+		"label":"Iniciar",
+		"type":"submit",
+		"placeholder":"Iniciar",
+		}
+
+	]},
+	{"registro":[
+		{
+		"label":"Usuario/Email",
+		"type":"input",
+		"placeholder":"usuario o email",
+		},
+		{
+		"label":"Contraseña",
+		"type":"password",
+		"placeholder":"contraseña",
+		},
+		{
+		"label":"Repita Contraseña",
+		"type":"password",
+		"placeholder":"repita contraseña",
+		},
+		{
+		"label":"Registrar",
+		"type":"submit",
+		"placeholder":"Registrar",
+		}
+	]}
+	]
+},
+{"NAVBAR":[
+	{}
+]
+}
+
+//TRAS PRUEBAS JSON_ENCODE
+//
+{"FORM":{
+	"inicio":[
+		{"label":"Usuario\/Email","type":"text","placeholder":"Usuario\/Email"},
+		{"label":"Contrase\u00f1a","type":"password","placeholder":"Contrase\u00f1a"},
+		{"label":"Log in","type":"submit","placeholder":"Log in"}
+	],
+	"registro":[
+		{"label":"Usuario\/Email","type":"text","placeholder":"Usuario\/Email"},
+		{"label":"Contrase\u00f1a","type":"password","placeholder":"Contrase\u00f1a"},
+		{"label":"RContrase\u00f1a","type":"password","placeholder":"Repita contrase\u00f1a"},
+		{"label":"Registrar","type":"submit","placeholder":"Registrar"}
+	]
+	}
+}

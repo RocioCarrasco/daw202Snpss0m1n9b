@@ -1,0 +1,7 @@
+TODO: PRESENTACIÓN
+
+*) Eliminar bootstrap
+
+*) HTML5 Compatible
+
+*) Vistas/Funcionalidad

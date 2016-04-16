@@ -1,0 +1,73 @@
+.form_fields_cont{
+	width: 100%;
+	padding-bottom: 2em;
+}
+
+.form-group{
+	margin-right: 10px;
+}
+.r{
+	margin-right: 0;
+	float:right;
+}
+
+legend.h1{
+	font-size: 1.5em;
+	/*text-align: center;*/
+
+	margin-top: 2em;
+	margin-bottom: 2em;
+
+	color: #ff0000;
+	border-bottom: 1px solid #ff0000;
+}
+
+select{
+	display:block;
+	width: 100%;
+}
+	select option:checked{
+		background-color: #fff;
+		color: #000;
+	}
+/*
+
+select:-internal-list-box:focus option:checked {
+    background-color: -internal-active-list-box-selection;
+    color: -internal-active-list-box-selection-text;
+}
+
+ */
+
+select:-internal-list-box:focus option:checked {
+    background-color: #808080;
+    color: #000;
+}
+
+select:-internal-list-box:focus option[selected="selected"]:checked {
+    background-color: #800000;
+    color: #fff;
+}
+/*
+select:-internal-list-box option:checked {
+    background-color: -internal-inactive-list-box-selection;
+    color: -internal-inactive-list-box-selection-text;
+}
+
+select:-internal-list-box option:checked {
+    background-color: -internal-inactive-list-box-selection;
+    color: -internal-inactive-list-box-selection-text;
+}
+*/
+	select option:onfocus{
+		background-color: #808080;
+		color: #000;
+	}
+	select option[selected]:onfocus{
+		background-color: #800000;
+		color: #fff;
+	}
+	select option[selected="selected"]{
+		background-color: #f00;
+		color: #fff;
+	}

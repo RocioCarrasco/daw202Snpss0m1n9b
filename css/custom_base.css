@@ -1,0 +1,171 @@
+/*Fuentes*/
+@import url(custom_form.css);
+@import url(custom_fonts.css);
+
+body{
+	width: 100%;
+	height: 100%;
+
+	background-color: #fff;
+}
+
+body, header, nav, section, article, footer, aside, div{
+	margin: 0;
+	padding: 0;
+	float:left;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+	margin: 0;
+}
+
+	header{
+		float:left;
+		width: 100%;
+		height: 10px;
+
+		background-color: #c4c4c4;
+	}
+
+	nav{
+		float:left;
+		width: 100%;
+		/*margin: .2em 0;
+		*/
+		background-color: #fff;
+	}
+		.nav_bar{
+			float:left;
+			display: inline;
+			margin: 0;
+			padding: 0;
+			height: 2.2em;
+		}
+
+	#main{
+		float:left;
+		width:100%;
+		background-color: #fff;
+
+		padding-top: 10px;/*heigth del header*/
+		padding-bottom: 10px;/*height del footer*/
+	}
+		section{
+			float: left;
+			/*width: 70%;*/
+			width: 100%;
+
+			background-color: #f2f2f2;
+		}
+		aside{
+			float: left;
+			/*width: 14%;*/
+			width: 100%;
+			/*
+			height: 100%;
+*/
+			background-color: #dfdfdf;
+
+		}
+
+	footer{
+		float:left;
+		width: 100%;
+		height: 10px;
+		background-color: #c4c4c4;
+		
+		position: absolute;
+		bottom: 0;
+	}
+
+/*=======================================*/
+.main_cont{
+	padding: 0 1em;
+}
+
+/*========================================*/
+.nav_title{
+	float:left;
+	text-align: center;
+	padding: 1em;
+}
+
+.nav_item{
+	float:left;
+	list-style:none;
+	text-align: center;
+	/*vertical-align: middle;*/
+
+}
+.nav_item a{
+	float:left;
+	text-decoration: none;
+	padding: .4em;
+	border: 1px #dfdfdf solid;
+}
+.nav_item:hover{
+	background-color: #dfdfdf;
+	border: 1px #f4f400 solid;
+}
+
+/*======CONTENEDORES=============*/
+.container{
+	width: 100%;
+	margin: 0 1em;
+}
+.container_b{
+	width: 30%;
+}
+
+article{
+	width: 90%;
+	margin: 0 5% 2em 5%;
+}
+#contenedor{
+	width: 100%;
+}
+/*=====DISPLAYERS(proyecto,tarea)===========*/
+#proyect_display,#task_display{
+	width: 100%;
+	padding: 20px 0;
+	/*text-align: center;*/
+}
+
+/*========ASIDE IZQUIERDO=========*/
+
+#left .content{
+	width: 80%;
+}
+#left .buttons{
+	width: 20%;
+}
+
+
+/*======MEDIA=========*/
+@media(max-width: 450px){
+	aside, section{
+		width: 100%;
+	}
+	.container{
+		width: 90%;
+		margin: 0 5%;
+	}
+	.container_b{
+		float:left;
+		width: 25%;
+		margin: 0 1%;
+		padding:1%;
+		background-color: #fff;
+	}
+	.antes, .despues{
+		float:left;
+		width: 2%;
+		height: 20px;
+		background-color: #000;
+
+	}
+	.despues{
+		float:right;
+	}
+
+}
