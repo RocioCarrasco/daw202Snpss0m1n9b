@@ -1,0 +1,15 @@
+160416 TO DO :
+
+Añadir eventos a enlaces y botones desde js
+	añadir librerías al head
+	class .bt 
+
+	XXX las funciones xajax_ no se ejecutan bien si se enlazan con jquery
+
+__________________________________________
+
+Posible cambio xajax a jquery
+	Incrustar html generado en objeto xajax temporalmente
+	Programar funciones jquery
+	Probar nuevas funciones
+	Eliminar vínculos xajax
