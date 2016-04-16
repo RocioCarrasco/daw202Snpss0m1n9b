@@ -26,8 +26,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `PROYECTO_TEST`
 --
-CREATE DATABASE IF NOT EXISTS `2_PROYECTO_TEST_INSERTDEMO` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `2_PROYECTO_TEST_INSERTDEMO`;
+CREATE DATABASE IF NOT EXISTS `PROYECTO_TEST` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `PROYECTO_TEST`;
 
 -- --------------------------------------------------------
 
@@ -163,9 +163,9 @@ CREATE TABLE IF NOT EXISTS `USER_PROYECTO` (
 --
 
 INSERT INTO `USER` (`id`, `nick`, `email`, `pass`) VALUES
-('US00001', 'user1', 'none', ''),
-('US00002', 'user2', 'none', ''),
-('US00003', 'user3', 'none', ''),
+('US00001', 'user1', 'none', 'b59c67bf196a4758191e42f76670ceba'),
+('US00002', 'user2', 'none', 'b59c67bf196a4758191e42f76670ceba'),
+('US00003', 'user3', 'none', 'b59c67bf196a4758191e42f76670ceba'),
 ('US00004', 'userdemo', 'x', 'b59c67bf196a4758191e42f76670ceba'),
 ('US00005', 'userdemo2', 'x', 'b59c67bf196a4758191e42f76670ceba');
 
