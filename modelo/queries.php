@@ -36,7 +36,7 @@
 	//Contar usuarios: necesario para crear id_registro
 		const CONTAR_USUARIOS="SELECT COUNT(id) FROM USER"; 
 
-//INSERTAR DATOS
+//INSERTAR DATOS__________________________________________________________
 		//Nuevo proyecto
 		const INSERTAR_PROYECTO="INSERT INTO PROYECTO (id,title,descripcion,fechaLimit) VALUES (?,?,?,?)";
 				const INSERTAR_USER_PROYECTO="INSERT INTO USER_PROYECTO (id_proyecto,id_user,id_rango) VALUES (?,?,?)";
@@ -49,7 +49,7 @@
 		const INSERTAR_TAREA="INSERT INTO TAREA (fase,id_proyecto,id,id_status,title,descripcion) VALUES (?,?,?,?,?,?)";
 
 
-//ELIMINAR DATOS
+//ELIMINAR DATOS__________________________________________________________
 		//Eliminar proyecto
 		const DEL_PROYECTO="DELETE FROM PROYECTO WHERE ID=?";
 
@@ -62,5 +62,7 @@
 
 		const DEL_TODO_USER_PROYECTO="DELETE FROM USER_PROYECTO WHERE ID_PROYECTO=?";
 		const DEL_USER_PROYECTO="DELETE FROM USER_PROYECTO WHERE ID_PROYECTO=? AND ID_USER=?";
+
+//ARCHIVAR DATOS (HISTÓRICO)
 }
 ?>

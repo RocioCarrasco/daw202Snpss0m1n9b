@@ -6,20 +6,21 @@
 //
 //
 //class.USUARIO
-function crearIdUsuario(){
-	$id="";
-	$aux="";
+// function crearIdUsuario(){
+// 	$id="";
+// 	$aux="";
 
-	$numero=DB::contarUsuarios()['COUNT(id)'];
-	crearCerosId($id,$numero,$aux);
+// 	$numero=DB::contarUsuarios()['COUNT(id)'];
+// 	crearCerosId($id,$numero,$aux);
 
-	return 'US' . $aux . $id;
-}
+// 	return 'US' . $aux . $id;
+// }
 	
 function crearUsuario($nick,$pass,$email,$new){
 
 	if($new){
-		$array["id"]=crearIdUsuario();
+		$array["id"]=crearIdUnico();
+		//$array["id"]=crearIdUsuario();
 		$array["nick"]=$nick;
 		$array["pass"]=$pass;
 		$array["email"]=$email;
@@ -45,21 +46,22 @@ function registrar(){
 //CREAR PROYECTO
 //
 //class.Proyecto
-	function crearIdProyecto(){
-	$id="";
-	$aux="";
+	// function crearIdProyecto(){
+	// $id="";
+	// $aux="";
 
-	$numero=DB::contarProyectos()["COUNT(ID)"];
+	// $numero=DB::contarProyectos()["COUNT(ID)"];
 
-		crearCerosId($id,$numero,$aux);
+	// 	crearCerosId($id,$numero,$aux);
 
-	return 'PR' . $aux . $id;
-	}
+	// return 'PR' . $aux . $id;
+	// }
 
 	function crearNuevoProyecto(){
 		$atributos=NULL;
 
-		$atributos["id"]=crearIdProyecto();
+		$atributos["id"]=crearIdUnico();
+	//	$atributos["id"]=crearIdProyecto();
 		$atributos["title"]=$_REQUEST["tx_title"];
 		$atributos["descripcion"]=$_REQUEST["tx_desc"];
 
@@ -83,24 +85,25 @@ function registrar(){
 	function crearNuevaFase(&$atributos,$id_proyecto,$title="DEFAULT",$desc="DEFAULT"){
 
 		$atributos["proyecto_fase"]=$id_proyecto;
-		$atributos["id_fase"]=crearIdFase($id_proyecto);
+		$atributos["id"]=crearIdUnico();
+		//$atributos["id_fase"]=crearIdFase($id_proyecto);
 
 			$atributos["title_fase"]=$title;
 			$atributos["descripcion_fase"]=$desc;
 	}
 
-	function crearIdFase($id_proyecto){
-			$id="";
-			$aux="";
+	// function crearIdFase($id_proyecto){
+	// 		$id="";
+	// 		$aux="";
 
-			$numero=DB::contarFases($id_proyecto)['COUNT(ID)'];
-
-
-		crearCerosId($id,$numero,$aux);
+	// 		$numero=DB::contarFases($id_proyecto)['COUNT(ID)'];
 
 
-	return 'FA' . $aux . $id;
-	}
+	// 	crearCerosId($id,$numero,$aux);
+
+
+	// return 'FA' . $aux . $id;
+	// }
 
 //CREAR TAREA
 //class.tarea
@@ -109,7 +112,8 @@ function crearTarea($fase="FA00000"){
 
 	$atributos["fase"]=$fase;
 	$atributos["id_proyecto"]=$_SESSION["proyecto"];
-	$atributos["id"]=crearIdTarea();
+	$atributos["id"]=crearIdUnico();
+	//$atributos["id"]=crearIdTarea();
 	$atributos["id_status"]=1;
 	$atributos["title"]=$_REQUEST["tx_title"];
 	$atributos["descripcion"]=$_REQUEST["tx_desc"];
@@ -117,38 +121,49 @@ function crearTarea($fase="FA00000"){
 	return DB::insertarTarea($atributos);
 }
 
-	function crearIdTarea(){
-			$id="";
-			$aux="";
+	// function crearIdTarea(){
+	// 		$id="";
+	// 		$aux="";
 
-			$numero=DB::contarTareas($_SESSION["proyecto"])['COUNT(ID)'];
+	// 		$numero=DB::contarTareas($_SESSION["proyecto"])['COUNT(ID)'];
 
 
-		crearCerosId($id,$numero,$aux);
+	// 	crearCerosId($id,$numero,$aux);
 
-	return 'TA' . $aux . $id;
-	}
+	// return 'TA' . $aux . $id;
+	// }
 
 //
 //FUNCIÓN GENERAL IDS
 //-------------------
 
-		function crearCerosId(&$id,&$numero,&$aux){
-				$contador=0;
-				$resto=NULL;
-				$id=$numero+1;
-				$numero++;
+		// function crearCerosId(&$id,&$numero,&$aux){
+		// 		$contador=0;
+		// 		$resto=NULL;
+		// 		$id=$numero+1;
+		// 		$numero++;
 
-		while($numero>=1){
+		// while($numero>=1){
 
-			$numero=(int)$numero/10;
-				$contador+=1;
-			}
+		// 	$numero=(int)$numero/10;
+		// 		$contador+=1;
+		// 	}
 
-		$contador2= 5-$contador;
-			for($i=0;$i<$contador2;$i++){
-				$aux .= '0'; 
-			}
-		} 
+		// $contador2= 5-$contador;
+		// 	for($i=0;$i<$contador2;$i++){
+		// 		$aux .= '0'; 
+		// 	}
+		// } 
 //-----------------------------------------
+//	NUEVA FUNCIÓN DE CREAR IDS ÚNICOS
+		function crearIdUnico(){
+				$uid="";
+
+				$uid.=md5(uniqid());
+				$arr=str_split($uid);
+				array_splice($arr, sizeof($arr)/4,0,"-");
+				$uid=implode("", $arr);
+
+				return $uid;
+		}
 ?>
