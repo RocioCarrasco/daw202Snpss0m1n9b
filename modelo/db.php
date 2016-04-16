@@ -492,18 +492,127 @@ public static function contarFases($id_proyecto){
 			$conexion;
 			self::conectar($conexion);
 
-				$resultado=$conexion->prepare(QR::DEL_PROYECTO);
-				$resultado->bindParam(1,$id);
-				$resultado->execute();
+				if(self::eliminarFase($conexion,$id,null)){
 
-				if($resultado->rowCount()==1){
-					self::desconectar($conexion);
-					return true;
+						$resultado=$conexion->prepare(QR::DEL_PROYECTO);
+						$resultado->bindParam(1,$id);
+						$resultado->execute();
+
+						if($resultado->rowCount()==1){
+							//datos relacionados: comments, metadata
+							self::eliminarUserProyecto(null,$id,null);
+							self::desconectar($conexion);
+							return true;
+						}
 				}
 
 			self::desconectar($conexion);
 			return false;
 		}
+
+
+
+private static function eliminarFase($conexion,$id_proyecto,$id=null){
+				if($id==null){
+					//no controlamos si encuentra más de cero porque puede no tener tareas la fase
+						self::eliminarTareas($conexion,$id_proyecto,null,null);
+
+						$resultado=$conexion->prepare(QR::DEL_TODAS_FASE);
+						$resultado->bindParam(1,$id_proyecto);
+						$resultado->execute();
+
+						if($resultado->rowCount()>0){
+							//datos relacionados: comments, metadata
+							return true;
+						}
+
+				}else{
+						self::eliminarTareas($conexion,$id_proyecto,$id,null);
+
+						$resultado=$conexion->prepare(QR::DEL_FASE);
+						$resultado->bindParam(1,$id_proyecto);
+						$resultado->bindParam(2,$id);
+						$resultado->execute();
+
+						if($resultado->rowCount()>0){
+							//datos relacionados: comments, metadata
+							return true;
+						}
+				}
+
+			return false;
+		}
+
+	//de debería poder eliminar una tarea sin eliminar nada más
+	// crear variable conexion dentro 
+private static function eliminarTareas($conexion,$id_proyecto,$id_fase=null,$id=null){
+			if($id_fase==null){
+						$resultado=$conexion->prepare(QR::DEL_PROYECTO_TAREA);
+						$resultado->bindParam(1,$id_proyecto);
+						$resultado->execute();
+
+						if($resultado->rowCount()>0){
+							//datos relacionados: comments, metadata
+							return true;
+						}
+
+			}else if($id==null){
+						$resultado=$conexion->prepare(QR::DEL_FASE_TAREA);
+						$resultado->bindParam(1,$id_proyecto);
+						$resultado->bindParam(2,$id_fase);
+						$resultado->execute();
+
+						if($resultado->rowCount()>0){
+							//datos relacionados: comments, metadata
+							return true;
+						}
+
+			}else{
+						$resultado=$conexion->prepare(QR::DEL_TAREA);
+						$resultado->bindParam(1,$id_proyecto);
+						$resultado->bindParam(2,$id_fase);
+						$resultado->bindParam(3,$id);
+						$resultado->execute();
+
+						if($resultado->rowCount()>0){
+							//datos relacionados: comments, metadata
+							return true;
+						}
+			}
+			return false;
+}
+
+public static function eliminarUserProyecto($conexion=null,$id_proyecto,$id_user=null){
+
+		$nuevaConexion=null;
+			if($conexion==null){
+				self::conectar($nuevaConexion);
+				$conexion=$nuevaConexion;
+			}
+
+				if($id_user==null){
+						$resultado=$conexion->prepare(QR::DEL_TODO_USER_PROYECTO);
+						$resultado->bindParam(1,$id_proyecto);
+						$resultado->execute();
+
+						if($resultado->rowCount()>0){
+							if($nuevaConexion!=null)self::desconectar($conexion);
+							return true;
+						}
+				}else{
+						$resultado=$conexion->prepare(QR::DEL_USER_PROYECTO);
+						$resultado->bindParam(1,$id_proyecto);
+						$resultado->bindParam(2,$id_user);
+						$resultado->execute();
+
+						if($resultado->rowCount()>0){
+							if($nuevaConexion!=null)self::desconectar($conexion);
+							return true;
+						}
+				}
+		if($nuevaConexion!=null)self::desconectar($conexion);
+		return false;
+}
 
 }
 ?>

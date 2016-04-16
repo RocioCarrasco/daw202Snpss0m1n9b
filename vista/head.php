@@ -24,21 +24,14 @@
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
-		<script type="text/javascript" src="js/custom/custom.js">
-			// function seleccionar(idOptioninSelect){
-			// 	var option=document.getElementById(idOptioninSelect);
-			// 	if(option.getAttribute('selected')!=null){
-			// 		alert("set");
-			// 		option.removeAttribute('selected');
-			// 		//quitar foco, deseleccionar
-			// 	}else{
-			// 		alert("unset");
-			// 		option.setAttribute('selected','selected');
-			// 		//añadir foco, seleccionar
-			// 	}
-			}
 
-		</script>
+<!-- JQUERY -->
+		<script type="text/javascript" src="lib/jquery/jquery-1.12.1.min.js"></script>
+
+<!-- JS PROPIO -->
+		<script type="text/javascript" src="js/custom/nodos.js"></script>
+		<script type="text/javascript" src="js/custom/init.js"></script>
+		<script type="text/javascript" src="js/custom/custom.js"></script>
 	</head>
 	<body>
 		<div id="contenedor">

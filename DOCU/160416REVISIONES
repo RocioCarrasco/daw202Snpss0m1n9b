@@ -1,0 +1,42 @@
+CREACION DE PROYECTO:
+
+objeto_xajax -> pintarFormulario()
+button#bt_crearPro 
+#JS se ejecuta antes que el evento submit
+
+JS
+	onclick -> antesNuevoPro();
+
+			custom.js 
+			-> arregloColaboradoresSeleccionados();
+				inputHidden#tx_hidden_collabs = crea un array con los colaboradores seleccionados
+
+			-> setIdRequest();
+				inputHidden#id_REQUEST = fecha creacion (para controlar si es la misma petición, refresco del navegador)
+
+	submit -> recarga la página
+
+controller_eventos 
+ -> controlFormularios();
+
+controller_objetos 
+	-> crearNuevoProyecto();
+	$atributos[]
+	 	*id
+	 	*title
+	 	*descripcion
+	 	*collabs 
+	 	*fLimit = tx_flimit + tx_flimit_hora
+
+
+DB::insertarProyecto[$atributos]
+
+-- No inserta fecha de creacion
+__________________________________________________
+
+BORRAR PROYECTO
+
+xajax_delProyecto(id_proyecto);
+
+controller -> eliminarProyecto($id);
+DB::eliminarProyecto($id)
