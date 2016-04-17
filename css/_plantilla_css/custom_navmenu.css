@@ -1,0 +1,101 @@
+/* elementos comunes */
+ .nav_bar, .menu_bar{
+			float:left;
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+		}
+ .nav_item, .menu_item{
+		display: inline-block;
+	}
+
+ .nav_item a,.nav_item span, .menu_item a{
+ 		display: inline-block;
+		text-decoration: none;
+	}
+
+/* NAVEGACION : nav */
+
+	body > header .nav_bar{
+		/*min-width: 200px; */
+			min-width: 50px;
+		/*
+			font-size: 1.5em;
+		*/
+			font-size: 1em;
+			font-weight: lighter;
+			color: #999;
+			text-align: center;
+		}
+		body > header .nav_bar .prev{
+			padding-right: .5em;
+			/*
+			padding-right: 2em;
+			*/
+			/*float: left;*/
+		}
+		body > header .nav_bar .next{
+			padding-left: .5em;
+			/*
+			padding-left: 2em;
+			 */
+			/*float: right;*/
+		}
+
+
+	body > header .nav_bar .nav_item a,body > header .nav_bar .nav_item span{
+		padding: 8px;
+	}
+	body > header .nav_bar .nav_item a{
+		color: #f00;
+	}
+	body > header .nav_bar .nav_item a:hover{
+		font-weight: bold;
+		color: #000;
+	}
+
+
+
+/* COMANDOS : menu */
+
+	body > aside .menu_bar{
+		width: 100% ;
+
+			font-size: .8em;
+			font-weight: lighter;
+			color: #999;
+			text-align: center;
+
+		padding: .5em 0;
+	}
+	body > aside .menu_bar .menu_item{
+		margin: 2px;
+	}
+	body > aside .menu_bar .menu_item a{
+		width: 43px;
+		height: 43px;
+		
+		background-color: #fff;
+
+		border-radius: .5em;
+		border: 1px outset #eee;
+	}
+	
+	body > aside .menu_bar .menu_item a:hover{
+
+		color: #fff;
+		background-color: #f00;
+
+		border: 1px outset #eee;
+	}
+	body > aside .menu_bar .menu_item a:active{
+	/*
+		color: #fff;
+		background-color: #f00;
+	*/
+		border: 2px inset #eee;
+		width: 40px;
+		height: 40px;
+	}
+
+	

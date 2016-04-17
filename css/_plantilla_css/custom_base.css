@@ -1,0 +1,24 @@
+/*reseteo de estilos por defecto___________*/
+	@import url(custom_reset.css);
+
+/*maquetación______________________________*/
+	@import url(custom_layout.css);
+
+/*estilos nav y menu_______________________*/
+	@import url(custom_navmenu.css);
+
+/*fuentes__________________________________*/
+	@import url(custom_fonts.css);
+
+/*formularios______________________________*/
+	@import url(custom_forms.css);
+
+/*colores__________________________________*/
+	@import url(custom_colors.css);
+
+
+
+/*
+body > #main.inicio section{	
+}
+*/

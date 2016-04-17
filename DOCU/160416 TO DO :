@@ -13,3 +13,19 @@ Posible cambio xajax a jquery
 	Programar funciones jquery
 	Probar nuevas funciones
 	Eliminar vínculos xajax
+____________________________________________
+
+160417 TODO:
+
+Crear plantillas de documentos: modularizar.
+	-> Dashboard/Resumen.
+	-> Ficha detalle/Perfil
+	-> Grupos.
+	-> Barra Comandos aside
+
+	-> Módulos desplegables datos
+	-> Módulos en carrusel
+
+Reordenar CSS, hay sobrante y duplicado, todo está muy mezclado.
+
+Enviar botones de comandos (crear proyecto/tarea) al menú lateral desplegable.

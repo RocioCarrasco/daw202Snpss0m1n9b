@@ -1,0 +1,413 @@
+/*custom_layout_320*/
+
+html{
+	height: 100%;
+}
+body{
+
+	width: 100%;
+
+	min-height: 100%;
+	background-image: url(../img/logoImago.svg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: -50px bottom;
+	
+}
+
+/*Cabecera*/
+body > header{
+	/* fixed sólo para resoluciones sin menú separado/movil */
+/*	position: fixed;*/
+		top: 0;
+		z-index: 2;
+
+	text-align: center;
+		width: 100%;
+		height: 54px;
+	
+
+		border-bottom: 2px #eee solid;
+}
+
+body > header.desplegado{
+	height: 100%;
+	background-color: rgba(255,255,204,0.8);
+}
+
+	body > header .logo{
+		float:left;
+		width: 60px;
+		height: 64px;
+/*
+		padding: 0 .1em;
+*/		
+
+/*background-color: #eee;
+*/
+	}
+	body > header .logo img{
+		width: 50px;
+		/*height: 50px;
+		*/
+		margin: 8px 4px 4px 4px;
+		/*background-color: #f00;*/
+
+		/*border-radius: 3em;
+		border: 1px outset #eee;*/
+	}
+
+	/*Navegacion*/
+
+
+/*TODAS LAS OPCIONES DE NAVEGACIÓN*/
+	body > header #nav_panel{
+		/*display:none;*/
+		position: relative;
+		top: 100px;
+
+	}
+
+	body > header nav{
+		float:left;
+	}
+/*
+	body > header .header-bt{
+		display: inline-block;
+		padding: 10px;
+		
+		height: 18px;
+		width: 18px;
+
+		text-decoration: none;
+		text-align: center;
+
+		font-size: 1em;
+		font-weight: bolder;
+		color: #909090;
+
+		border: 1px solid #eee;
+		border-radius: .2em;
+	}
+	body > header .header-bt:hover{
+		border-color: #f00;
+	}
+
+		body > header #system_msg_bt{
+		position: absolute;
+		color: #f00;
+		right: 10px;
+		}
+*/
+
+/*BOTÓN PRINCIPAL*/
+	body > header .header-bt{
+		display: inline-block;
+		padding: 18px;
+		
+		height: 20px;
+		width: 20px;
+
+		text-decoration: none;
+		text-align: center;
+
+		font-size: 1em;
+		font-weight: bolder;
+		color: #909090;
+
+
+		background-color: #fff;
+		border: 3px #eee outset;
+		border-radius: 50%;
+		
+		
+		/*position: fixed;
+		
+		left: 45%;
+		
+		top: 20px;
+		*/
+	}
+
+	body > header .main-header-bt{
+	/* dentro de menú separado/movil no puede ser fixed */	
+		position: fixed;
+		left: 40%;
+		top: 20px;
+		
+	}
+
+	body > header .exit-header-bt{	
+	/* desaparece fuera del menú */
+		/*display:none;	
+*/
+		position: fixed;
+		left: 20px;
+		top: 20px;
+
+		background-color: transparent;
+		
+	}
+
+		body > header .close-header-bt{
+		/* desaparece fuera del menú */
+		/*	display: none;*/
+
+		position: fixed;
+		right: 20px;
+		top: 20px;
+
+		background-color: transparent;
+		
+	}
+
+	body > header .normal-header-bt{
+		display: inline-block;
+		float: left;
+
+		height: 3em;
+		width: 48%;
+		
+		margin: 1%;
+		font-size: 1em;
+		padding: .5em;
+	}
+
+/*BLOQUE DE MENÚ NAVEGACIÓN*/
+	body > header .nav_group{
+		float: left;
+		padding: 1em;
+		margin: 0 2em 2em;
+		width: 80%;
+		
+		font-size: 0.8em;
+
+		background-color: transparent;
+		border: 1px inset #eee;
+	}
+		body > header .nav_group .normal-header-bt{
+			width: 31%;
+			height: 10em;
+			/*min-height: 8em;*/
+		}
+		
+			body > header .nav_group .normal-header-bt img{
+				display: inline-block;
+				margin: 10% 10% 5%;
+				width: 80%;
+			}
+			body > header .nav_group .normal-header-bt span{
+				display: inline-block;
+				height: 2.2em;
+			}
+
+
+		body > header .nav_group .toogle-header-bt{
+			margin-top: 1em;
+			width: 100%;
+			
+			padding: 0;
+			height: 2.2em;
+
+			position: relative;
+			top: 1.5em;
+		}
+
+		body > header .nav_group .toogle-header-bt img{
+			height: 2em;
+			margin: 2px;
+		}
+
+
+
+
+/* Mensajes del sistema */
+body > #site_msg{
+	position: fixed;
+	/*top:0; original escritorio */
+	/*top: 70px; */
+	top: 54px;
+
+	right: 10px;
+
+	max-width: 300px;
+
+	z-index: 8;
+	text-align: right;
+}
+ body > #site_msg .msj{
+	display: inline-block;
+
+ 	margin: .2em 0;
+ 	padding: .4em;
+
+ 	border-radius: .5em;
+ 	border-bottom: 1px #f60 solid;
+ 	border-right: 1px #f60 solid;
+
+ 	background-color: #ffa;
+ }
+
+ body > #site_msg .msj a{
+ 	margin-right: .3em;
+ 	text-decoration: none;
+ 	color: #f00;
+ 	font-weight: bold;
+ }
+
+/*Contenido Principal*/
+body > #main{
+	
+	padding-top: 50px;
+
+	margin:  0 0em 4em 60px;
+	margin-left: 0;
+
+	min-height: 100%;
+}
+	body > #main section{
+		border-top: 1px solid #eee;
+		border-bottom: 1px solid #eee;
+
+		min-height: 200px;
+		background-color: rgba(255,255,255,0.8);
+	}
+
+
+
+/* main en inicio.php 
+INICIO DE SESION */
+body > #main.inicio{
+	padding: 0;
+	margin: 0;
+
+	height: 100%;
+	width: 100%;
+	position:fixed;
+}
+	body > #main.inicio section{
+		padding: 10% 2em;
+		min-height: 100%;
+
+		text-align: center;
+
+		background-image: url(../img/corchoboard_2.jpg);
+		background-attachment: fixed;
+/*		background-size: 1000px;*/
+		background-repeat: no-repeat;
+		background-position: bottom center; 
+		
+
+	}
+
+	body > #main.inicio section img{
+		width: 100px;
+
+		padding: .5em;
+		background-color: #fff;
+	}
+
+	body > #main.inicio section .web-desc{
+		width: 300px;
+		border-radius: 2em 2em 0 0;
+		padding: 1em .2em;
+		margin: .5em auto;
+		background-color: rgba(0,0,0,0.3);
+	}
+	body > #main.inicio section .web-desc p{
+		line-height: 2em;
+		font-style: italic;
+		font-weight: lighter;
+		font-size: 1.2em;
+		color: #300;
+	}
+
+
+
+/*Aside - barra de herramientas */
+body > aside{
+	position: fixed;
+	left: 0;
+	/*top: 120px;
+*/top: 64px;
+	min-height: 50px;
+	width: 60px;
+	/*background-color: #fff;
+*/
+	z-index: 2;
+}
+	body > aside menu{
+		width: 100%;
+		float: left;
+	}
+
+/*Pie*/
+body > footer{
+		height: 3em;
+		/* margin-left: 4em; */
+			margin:  0em 0em 0em 64px;
+			margin-left: 0;
+
+		/* min-width: 80%; */
+		background-color: #fff;
+
+		z-index: 1;
+}
+
+/* POP-MENU */
+
+body > #pop-menu{
+
+
+	position:absolute;
+	top:0;
+	
+	min-width: 100%;
+	min-height: 100%;
+	background-color: #f55;
+
+	z-index: 10;
+}
+
+	#pop-menu .menu_pop{
+		text-align: right;
+	}
+	#pop-menu .menu_pop h2{
+		display: inline-block;
+	}
+	#pop-menu .menu_pop .tag_pop{
+		display: inline-block;
+		color:#AA0000;
+
+		font-weight: lighter;
+
+	}
+	#pop-menu .menu_pop .tag_pop:after{
+		content: "|";
+		margin: 0 .5em;
+
+	}
+	#pop-menu .menu_pop a{
+		display: inline-block;
+		text-decoration: none;
+		text-align: center;
+		
+		font-size: 2em;
+		font-weight: bold;
+		color: #000;
+		
+		border: 2px dotted #000;
+
+		height: 30px;
+		width: 30px;
+		padding: 5px;
+		margin: 4px;
+
+	}
+
+	#pop-menu .menu_pop a:hover{
+		color: #fff;
+		border-color: #300000;
+		background-color: #f00;
+	}

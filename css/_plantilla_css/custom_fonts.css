@@ -1,0 +1,14 @@
+*{
+	font-family: "Frutiger LT Std",sans-serif;
+}
+body{
+		font-size: 10pt;
+}
+
+/*
+@media(max-width: 450px){
+	body{
+		font-size:10pt;
+	}
+}
+*/

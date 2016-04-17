@@ -42,7 +42,7 @@ function vistaRequest(){
 //Si ha desaparecido de la base de datos no lo verifica
 //if(anybodyThere($_SESSION["proyecto"])){}
 				getDatosProyecto($_SESSION["proyecto"],$arrayFases,$arrayTareas);
-				require_once("vista/vista_proyecto.php");
+				require_once("vista/new_vista_proyecto.php");
 
 			}else{
 
@@ -53,7 +53,7 @@ function vistaRequest(){
 				$arrayProyectos[$link["id_proyecto"]]=DB::getViewUserProyecto($link["id_proyecto"]);
 			}
 
-			require_once('vista/vista_lista_proyectos.php');
+			require_once('vista/new_vista_lista_proyectos.php');
 			
 			}
 		

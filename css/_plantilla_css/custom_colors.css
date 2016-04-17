@@ -1,0 +1,33 @@
+/*
+	
+	color de fondo #1: #eee;
+	color de fondo #2: rgba(255,255,255,0.8);
+	color de fondo #3: #ffa;
+
+	color de texto #1: #000;
+	color de texto #2: #909090;
+	color de texto #3: #000;
+_____________________________________________
+
+	color de fondo foco #1: rgba(204,255,255,0.8);
+	color de fondo foco #2: #f00;
+	
+	color de texto foco #1: #909090;
+	color de texto foco #2: #fff;
+
+ */
+/*DE CUSTOM_LAYOUT*/
+html{
+	background-color: #eee;
+}
+body{
+	background-color: #eee;
+}
+
+
+
+/*DE CUSTOM_BASE*/
+body > #main section.active{
+	background-color: rgba(204,255,255,0.8);
+	/*background-color: #ccffff;*/
+}

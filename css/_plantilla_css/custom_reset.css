@@ -1,0 +1,21 @@
+/*limpiar estilos------------------------------- */
+html, body{
+	min-height: 100%;
+	height: 100%;
+}
+
+html, body, header, footer, nav, menu, main, section, article, footer, aside, div{
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+	margin: 0;
+}
+
+.clear{
+	clear:both;
+}
+/* -------------------------------------------- */
+
