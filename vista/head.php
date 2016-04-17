@@ -20,19 +20,24 @@
 		<link href="css/custom.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/custom_base.css">
 -->
-		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 
 			<noscript>
+				<meta http-equiv="refresh" content="0; noJavaIE"/>
 			   <p><strong>!Atención! ¡Javascript no está activado!</strong></p>
 			   <p>Debido a que tu navegador no soporta la sintaxis HTML5, <strong>es necesario utilizar Javascript para simular algunos elementos.</strong></p>
 			   <p>Sin embargo, Javascript está deshabilitado en su navegador. <strong>Active Javascript para poder acceder al servicio.</strong></p>
 			</noscript>
 
 		<![endif]-->
+
+		<noscript>
+			<meta http-equiv="refresh" content="0; noJava"/>
+		</noscript>
 
 <!--CSS PLANTILLA CUSTOM: COMPROBANDOOOOOO-->
 		<link rel="stylesheet" type="text/css" href="css/_plantilla_css/custom_base.css">
@@ -46,18 +51,5 @@
 		<script type="text/javascript" src="js/custom/custom.js"></script>
 	</head>
 	<body>
-		<!--[if lt IE 9]>
-			<noscript class="noscript">
-			   <p><strong>!Atención! ¡Javascript no está activado!</strong></p>
-			   <p>Debido a que tu navegador no soporta la sintaxis HTML5, <strong>es necesario utilizar Javascript para simular algunos elementos.</strong></p>
-			   <p>Sin embargo, Javascript está deshabilitado en su navegador. <strong>Active Javascript para poder acceder al servicio.</strong></p>
-			</noscript>
-		<![endif]-->
-
-				<noscript class="noscript">
-				   <p><strong>¡Atención!¡Javascript no está activado!</strong></p>
-				   <p>Este servicio utiliza código Javascript.</p>
-				   <p>Sin embargo, Javascript está deshabilitado en su navegador. <strong>Active Javascript para poder acceder al servicio.</strong></p>
-				</noscript>
 
 <!--		<div id="contenedor"> -->
