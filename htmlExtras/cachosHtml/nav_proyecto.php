@@ -2,7 +2,7 @@
 
 <div class="display_mobile">
 	<a class="exit-header-bt header-bt" href="">S</a>
-	<a class="main-header-bt header-bt" href="">IR</a>
+	<a id="bt_mobile_nav" class="main-header-bt header-bt" href="">IR</a>
 	<a class="close-header-bt header-bt" href="">X</a>
 </div>
 

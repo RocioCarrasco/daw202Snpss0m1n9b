@@ -59,12 +59,12 @@ if($linkSessionProyecto!=NULL){
 <article id="cont-<?php print $arrayProyectos[$indice][0]['id_proyecto']; ?>">
 	<h3><a onclick="xajax_load_proyecto('<?php print $arrayProyectos[$indice][0]['id_proyecto']; ?>');"><?php print $arrayProyectos[$indice][0]['title_proyecto'] ?> || <?php print $arrayProyectos[$indice][0]['fechaLimit_proyecto']?></a></h3>
 
-	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	<div>
 		<h5>Descripción</h5>
 		<span><?php print $arrayProyectos[$indice][0]['descripcion_proyecto']; ?></span>	
 	</div>
 
-	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	<div>
 		<?php 
 			//$array=$arrayUserProyectos[$proyecto->id];
 		?>
@@ -104,6 +104,30 @@ if($linkSessionProyecto!=NULL){
 </div>
 
 <menu> opciones </menu>
+</section>
+
+<section>
+		<header>
+		<menu>
+					<ul class="menu_bar">
+						<li class="menu_item"><a alt="comando" href="">o</a></li>
+						<li class="menu_item"><a alt="comando" href="">o</a></li>
+						<li class="menu_item"><a alt="comando" href="">o</a></li>
+					</ul>
+		</menu>
+		|
+				<menu>
+					<ul class="menu_bar">
+						<li class="menu_item"><a alt="comando" href="">o</a></li>
+						<li class="menu_item"><a alt="comando" href="">o</a></li>
+						<li class="menu_item"><a alt="comando" href="">o</a></li>
+					</ul>
+				</menu>
+		<h2>título seccion</h2>
+	</header>
+	<div class="article_group">
+	</div>
+	<menu> opciones </menu>
 </section>
 
 </main>

@@ -1,9 +1,65 @@
 <header>
 
 <div class="display_mobile">
-	<a class="exit-header-bt header-bt" href="">S</a>
-	<a class="main-header-bt header-bt" href="">IR</a>
-	<a class="close-header-bt header-bt" href="">X</a>
+	<h1><?php echo $_SESSION['nick']?>: dashboard</h1>
+
+	<div id="mobile_nav_container">
+		<nav>
+
+			<ul class="nav_bar">
+				<div>sección</div>
+				<li class="nav_item active">
+					<a href="#">Proyectos</a>
+				</li>
+				<li class="nav_item">
+					<a id="link_logout" onclick="xajax_logOut();" >LOGOUT</a>
+				</li>
+				<li class="nav_item">
+					<a href="#">Buscar</a>
+				</li>
+				<li class="nav_item">
+					<a href="#">Profile</a>
+				</li>	
+			</ul>
+
+		<ul class="nav_bar">
+			<div>sección</div>
+			<li class="nav_item active">
+				<a href="#">Proyectos</a>
+			</li>
+			<li class="nav_item">
+				<a id="link_logout" onclick="xajax_logOut();" >LOGOUT</a>
+			</li>
+			<li class="nav_item">
+				<a href="#">Buscar</a>
+			</li>
+			<li class="nav_item">
+				<a href="#">Profile</a>
+			</li>	
+		</ul>
+
+		<ul class="nav_bar">
+			<div>sección</div>
+			<li class="nav_item active">
+				<a href="#">Proyectos</a>
+			</li>
+			<li class="nav_item">
+				<a class="link_logout"  >LOGOUT</a>
+			</li>
+			<li class="nav_item">
+				<a href="#">Buscar</a>
+			</li>
+			<li class="nav_item">
+				<a href="#">Profile</a>
+			</li>	
+		</ul>
+		</nav>	
+	</div>
+
+	<a class="exit-header-bt header-bt link_logout">S</a>
+	<a id="bt_mobile_nav" class="main-header-bt header-bt">IR</a>
+	<a class="close-header-bt header-bt">X</a>
+
 </div>
 
 <div class="display_medium">

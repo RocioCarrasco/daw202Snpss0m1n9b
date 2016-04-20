@@ -15,7 +15,7 @@ require_once 'htmlExtras/cachosHtml/nav_proyecto.php' ;
 	<header>
 		<h2>crea una tarea o muere</h2>
 	</header>
-
+	<div class="article_group">
 	<article>
 		<div id="task_display">
 			<?php if($arrayTareas==NULL){
@@ -26,13 +26,30 @@ require_once 'htmlExtras/cachosHtml/nav_proyecto.php' ;
 			<button id="bt_newTarea" class="btn btn-primary" onclick="xajax_pintarFormulario();">Crea una tarea</button>
 		</div>
 	</article>	
+	<div class="clear"></div>
+	</div>
 </section>
 
 <?php if($arrayTareas!=NULL){ ?>
 <section>
 
-	<header>
-		<h2>tareas creadas</h2>
+		<header>
+		<menu>
+					<ul class="menu_bar">
+						<li class="menu_item"><a alt="comando" href="">o</a></li>
+						<li class="menu_item"><a alt="comando" href="">o</a></li>
+						<li class="menu_item"><a alt="comando" href="">o</a></li>
+					</ul>
+		</menu>
+		|
+				<menu>
+					<ul class="menu_bar">
+						<li class="menu_item"><a alt="comando" href="">o</a></li>
+						<li class="menu_item"><a alt="comando" href="">o</a></li>
+						<li class="menu_item"><a alt="comando" href="">o</a></li>
+					</ul>
+				</menu>
+		<h2>tarea creadas</h2>
 	</header>
 
 

@@ -1,6 +1,71 @@
 /*
 	INICIALIZACIÓN DE ELEMENTOS
 */
+//recoger eventos del servidor
+//var boton_evento=$.ajax();
+
+$(document).ready(function(){
+	//boton_evento['link_logout']=xajax_logOut;
+	//boton_evento['bt_newPro']=xajax_pintarFormulario;
+
+	/*
+	 $('.clicker').each(function(indice,elemento){
+	 		if(boton_evento[$(elemento).attr('id')]!=null){
+	 			//$(elemento).click(boton_evento[$(elemento).attr('id')]);
+	 			iniciarEventos(elemento,$(elemento).attr('id'));
+	 		}
+	 });
+*/
+	iniciarFormato();
+	iniciarEventos();
+});
+
+function iniciarFormato(){
+		$('#main section:nth-child(even').css({'background-color':'rgba(240, 240, 240, 0.8)'});
+}
+function iniciarEventos(){
+	$('.main-header-bt').click(abrirMobileNav);
+	$('.close-header-bt').click(cerrarMobileNav);
+	$('.link_logout').click(function(){xajax_logOut();});
+
+	$('#bt_main_menu').click(abrirMobileMenu);
+}
+
+	function abrirMobileNav(){
+		$('.main-header-bt').hide();
+		$('.exit-header-bt').css({'display':'inline-block'});
+		$('.close-header-bt').css({'display':'inline-block'});
+		/*$('#mobile_nav_container').css({'display':'block'});
+		*/
+		$('.display_mobile').css({
+			'background-color':'rgba(255, 255, 224, 0.8)',
+			'position':'fixed',
+			'width':'100%',
+			'height':'100%'
+		});
+		$('#mobile_nav_container').show();
+	}
+	function cerrarMobileNav(){
+		$('.main-header-bt').show();
+		$('.exit-header-bt').removeAttr('style');
+		$('.close-header-bt').removeAttr('style');
+	/*	$('#mobile_nav_container').removeAttr('style');
+		*/
+		$('.display_mobile').removeAttr('style');
+		$('#mobile_nav_container').hide();
+	}
+
+	function abrirMobileMenu(){
+		$('#bt_main_menu').unbind('click',abrirMobileMenu);
+		$('#bt_main_menu').click(cerrarMobileMenu);
+		$('#mobile_menu_container').show();
+	}
+	function cerrarMobileMenu(){
+		$('#bt_main_menu').unbind('click',cerrarMobileMenu);
+		$('#bt_main_menu').click(abrirMobileMenu);
+		$('#mobile_menu_container').hide();
+	}
+
 // var boton_evento=new Array();
 
 	
