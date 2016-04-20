@@ -11,6 +11,12 @@
 		 $arrayFases=NULL;
 		 $arrayTareas=NULL;
 
+// recogida de datos
+		$requestedData=NULL;
+// variable de posición
+		$bookmark=NULL;
+
+
 	//xajax
 		//$xajax;
 ?>

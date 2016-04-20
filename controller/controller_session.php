@@ -12,15 +12,6 @@ function session_init($obj){
 		$_SESSION['nick']=$obj->nick;
 }
 
-/*
-$_REQUEST['cmd']
-	Una vez logeado y deslogeado se queda con el valor cmd=0, 
-	por lo que no se puede volver a logear a no se que se cambia el
-	valor o se elimine la variable manualmente.
-
-	Hay que cambiar el sistema hasta la aplicación de AJAX/JQUERY.
- */
-
 //SIN USO: el cierre de sesión se realiza con _xajax_logOut()
 			// function loginOut(){
 			// 	if(isset($_REQUEST['cmd'])){
@@ -70,4 +61,11 @@ function is_proyect_request(){
 	if(isset($_SESSION['proyecto']))return true;
 	return false;
 }
+
+
+//TODO: funciones nuevas de petición de vistas
+function getVistaInicio(){}
+function getVistaResumen($entidad=null){}
+function getVistaDetalle($entidad=null){}
+function getVistaListado($entidad=null){}
 ?>
