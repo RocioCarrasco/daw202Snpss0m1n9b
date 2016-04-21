@@ -26,7 +26,9 @@ function iniciarFormato(){
 function iniciarEventos(){
 	$('.main-header-bt').click(abrirMobileNav);
 	$('.close-header-bt').click(cerrarMobileNav);
+	
 	$('.link_logout').click(function(){xajax_logOut();});
+	$('.link_vmain').click(function(){xajax_load_main();});
 
 	$('#bt_main_menu').click(abrirMobileMenu);
 }
