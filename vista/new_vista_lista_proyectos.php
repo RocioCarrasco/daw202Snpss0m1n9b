@@ -3,9 +3,7 @@ require_once 'htmlExtras/cachosHtml/nav_lista_proyectos.php' ;
 ?>
 
 <?php 
-	//require_once "htmlExtras/cachosHtml/popMenuDemo.php";
 	require_once "htmlExtras/cachosHtml/asideDemo.php";
-
 ?>
 
 <main role="main" id="main">
@@ -43,7 +41,7 @@ require_once 'htmlExtras/cachosHtml/nav_lista_proyectos.php' ;
 						<li class="menu_item"><a alt="comando" href="">o</a></li>
 					</ul>
 				</menu>
-		<h2>proyectos creados</h2>
+		<h2>proyectos creados <a>v</a></h2>
 	</header>
 
 <div class="article_group">

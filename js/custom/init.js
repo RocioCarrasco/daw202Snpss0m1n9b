@@ -31,6 +31,10 @@ function iniciarEventos(){
 	$('.link_vmain').click(function(){xajax_load_main();});
 
 	$('#bt_main_menu').click(abrirMobileMenu);
+
+	$('.cmd_nPro').click(abrirFormNProyecto);
+	$('.bt_cerrarForm').click(cerrarForm);
+	//cerrar form
 }
 
 	function abrirMobileNav(){
@@ -68,6 +72,22 @@ function iniciarEventos(){
 		$('#mobile_menu_container').hide();
 	}
 
+	function mostrarAside(){
+		$('body > aside').show();
+	}
+	function ocultarAside(){
+		$('body > aside').hide();
+	}
+
+
+	function abrirFormNProyecto(){
+		$('aside').css({'left':'0'});
+		$('body #pop-menu').show();
+	}
+	function cerrarForm(){
+		$('aside').removeAttr('style');
+		$('body #pop-menu').hide();
+	}
 // var boton_evento=new Array();
 
 	

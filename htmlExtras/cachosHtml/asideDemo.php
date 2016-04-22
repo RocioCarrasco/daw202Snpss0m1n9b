@@ -1,10 +1,13 @@
 <aside id="aside">
+
+	<?php	require_once "htmlExtras/cachosHtml/popMenuDemo.php"; ?>
+
 <!-- BOTONERA DE ACCESO LATERAL -->
 	<div class="botonera">
 		<div class="display_medium">	
 				<menu class="active">
 					<ul class="menu_bar">
-						<li class="menu_item"><a alt="comando">o</a></li>
+						<li class="menu_item"><a class="cmd_nPro" alt="comando">Nuevo proyecto</a></li>
 						<li class="menu_item"><a alt="comando">o</a></li>
 						<li class="menu_item"><a alt="comando">o</a></li>
 					</ul>
@@ -30,7 +33,7 @@
 					<menu class="active">
 						<ul class="menu_bar">
 							<div>sección</div>
-							<li class="menu_item"><a alt="comando">o</a></li>
+							<li class="menu_item"><a class="cmd_nPro" alt="comando">Nuevo proyecto</a></li>
 							<li class="menu_item"><a alt="comando">o</a></li>
 							<li class="menu_item"><a alt="comando">o</a></li>
 						</ul>

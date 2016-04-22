@@ -1,4 +1,4 @@
-<div class="custom_container col-xs-12 col-sm-12 col-md-12 col-lg-12">
+<div>
 			<form action="" method="POST" role="form">
 
 			<legend>Nuevo Proyecto</legend>
@@ -47,7 +47,7 @@
 			</div>
 			</fieldset>
 	
-					<button id="bt_crearPro" name="bt_crearPro" type="submit" class="btn btn-primary" onclick="antesNuevoPro();" >Crear</button>
+					<button id="bt_crearPro" name="bt_crearPro" type="submit" class="bt_crearPro btn btn-primary" onclick="antesNuevoPro();" >Crear</button>
 
 			</form>
 

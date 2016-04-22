@@ -2,7 +2,7 @@
 
 	<div class="menu_pop">
 		<h2 class="tag_pop">Crear nuevo proyecto</h2>
-		<h2>cerrar</h2><a class="bt bt_cerrar" href="">x</a>
+		<h2>cerrar</h2><a class="bt_cerrarForm bt bt_cerrar">x</a>
 	</div>
 	
 	<!--

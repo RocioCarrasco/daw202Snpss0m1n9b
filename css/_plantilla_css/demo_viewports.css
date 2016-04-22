@@ -340,12 +340,16 @@ body > aside{
 	}
 
 	/* POP-MENU */
+aside{
+	position: fixed !important;
+}
+	body #pop-menu{
+		display:none;
 
-	body > #pop-menu{
-
-
-		position:absolute;
+		position:inherit;
+		
 		top:0;
+		left:0;
 
 		min-width: 100%;
 		min-height: 100%;
@@ -396,6 +400,14 @@ body > aside{
 		background-color: #f00;
 	}
 
+	#pop-menu form{
+		position: fixed;
+		height: 70%; 
+		width: 100%;
+		overflow: scroll;
+		background-color: #ffaaaa;
+	}
+
 
 /*--------------------------------*/
 
@@ -412,14 +424,18 @@ body > aside{
 		display:none;
 
 		width: 90%;
+/*
 		min-height: 200px;
+*/
+		max-height: 70%;
 
 		background-color: #ffcccc;
 		border: #f00 solid 1px;
 		margin: 0 5%;
 		
-		position: absolute;
-
+		position: fixed;
+		overflow-y: scroll;
+		
 		top: 100px;
 	}
 #mobile_nav_container .nav_bar{
@@ -443,7 +459,8 @@ body > aside{
 		position: fixed;
 		z-index: -1;
 		width: 100%;
-		min-height: 100%;
+		height: 100%;
+		overflow-y:scroll; 
 
 		background-color: #ffcccc;
 		border: #f00 solid 1px;
@@ -460,7 +477,6 @@ body > aside{
 		width: 80%;
 		padding: 5%;
 }
-
 
 /*
 =====================================================================
