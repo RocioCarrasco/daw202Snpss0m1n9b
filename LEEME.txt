@@ -1,0 +1,18 @@
+
+	INFORMACIÓN DE LAS VERSIONES 0.0.X
+
+___________________________________________________________
+
+Estas versiones contienen código antiguo, básicamente pruebas iniciales, por lo que:
+	
+	a) Hay muchos archivos que sobran.
+	b) No espero conservar mucho código del actual.
+	c) De hecho, espero perder bastante.
+	d) Y como va a desaparecer, no voy a gastar recursos en optimizarlo.
+
+Para la instalación:
+	- Los archivos de la base de datos se encuentran en: /DOCU/BBDD/20160416.
+	- La configuración de acceso a la misma está en /modelo/db.php.
+
+Demo:
+	- No implementada.
